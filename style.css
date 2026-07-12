@@ -3,8 +3,24 @@
     @AUTHOR: Romulo Andrey
 
 */
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+
+/*importações*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 body{
-    background-color: #f00;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+/*Layout*/
+.Conteiner{
+    margin:0 auto;
+    background-color: #7f0;
 }
 
 
@@ -15,12 +31,19 @@ body{
         background-color: #0ff
         ;
     }
+    /*Layout*/
+    .Conteiner{
+        max-width: 540px;
+    }
 }
 /*Tablet Portrait*/
 @media (min-width: 768px){
     body{
         background-color: #ffff00
         ;
+    }
+    .Conteiner{
+        max-width: 720px;
     }
 }
 /*Tablet Landscape*/
@@ -29,12 +52,18 @@ body{
         background-color: #ff6600;
         ;
     }
+    .Conteriner{
+        max-width: 960px;
+    }
 }
 /*PC*/
 @media (min-width: 1200px){
     body{
         background-color: #f00;
         ;
+    }
+    .Conteiner{
+        max-width: 1140px;
     }
 }
 

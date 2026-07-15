@@ -4,67 +4,152 @@
 
 */
 /* Reset CSS */
-*{
+* {
     margin: 0;
     padding: 0;
-    border:0;
+    border: 0;
 }
 
 /*importações*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
 }
 
 /*Layout*/
-.Conteiner{
-    margin:0 auto;
-    background-color: #7f0;
+.Conteiner {
+    margin: 0 auto;
+
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*topo do site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 
 /* smartphone portrait */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* cabeçalho */
+header {
+    height: 60px;
+}
+
+#Logo img {
+    width: 64px;
+    height: 64px;
+}
+
+#check {
+    display: none;
+}
+
+/* estilo do menu e itens */
+label {
+    font-size: 3em;
+    padding-right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all .7s;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*Smartphone landscape*/
-@media (min-width: 576px){
-    body{
-        background-color: #0ff
-        ;
-    }
+@media (min-width: 576px) {
+
     /*Layout*/
-    .Conteiner{
+    .Conteiner {
         max-width: 540px;
     }
 }
+
 /*Tablet Portrait*/
-@media (min-width: 768px){
-    body{
-        background-color: #ffff00
-        ;
-    }
-    .Conteiner{
+@media (min-width: 768px) {
+    .Conteiner {
         max-width: 720px;
     }
 }
+
 /*Tablet Landscape*/
-@media (min-width: 992px){
-    body{
-        background-color: #ff6600;
-        ;
-    }
-    .Conteriner{
+@media (min-width: 992px) {
+
+    .Conteiner {
         max-width: 960px;
     }
 }
+
 /*PC*/
-@media (min-width: 1200px){
-    body{
-        background-color: #f00;
-        ;
-    }
-    .Conteiner{
+@media (min-width: 1200px) {
+
+    .Conteiner {
         max-width: 1140px;
     }
-}
 
 
+
+    /* cabeçalho  */
+    header {
+        height: 120px;
+
+    }
+
+    #Logo img {
+        width: 188px;
+        height: 118px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #c00000;
+    }
+
+    }

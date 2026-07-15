@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 e CSS3 - One Page Site</title>
-    <meta name="description" content="Aprenda HTML5, CSS3 e SEO de forma simples, prática e objetiva desenvolvendo passo a passo do zero até a hospedagem um site one page moderno e responsivo.">
+    <meta name="description"
+        content="Aprenda HTML5, CSS3 e SEO de forma simples, prática e objetiva desenvolvendo passo a passo do zero até a hospedagem um site one page moderno e responsivo.">
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- cabeçalho -->
-     <header>
-        <div class="Conteiner">
-
+    <header id="inicio">
+        <div class="Conteiner Flex">
+            <div id="Logo">
+                <img src="img/logo 2.png" alt="hal 9000">
+            </div>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteudo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-     </header>
+    </header>
 
-     <!-- Main -->
+    <!-- Main -->
     <main>
         <div class="Conteiner">
             <h1>HTML5 e CSS3</h1>
@@ -25,7 +40,7 @@
     </main>
 
     <!-- Sobre -->
-    <section>
+    <section id="sobre">
         <div class="Conteiner">
             <h2>Aprender na Pratica</h2>
         </div>
@@ -46,7 +61,7 @@
     </section>
 
     <!-- Conteudo -->
-    <section>
+    <section id="conteudo">
         <div class="Conteiner">
             <h2>Conteudo</h2>
             <h3>HTML5</h3>
@@ -56,9 +71,11 @@
     </section>
 
     <!-- Rodape -->
-    <footer>
+    <footer id="contato">
         <div class="Conteiner">
         </div>
     </footer>
+    <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
 </body>
+
 </html>

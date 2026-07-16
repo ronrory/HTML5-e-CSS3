@@ -29,6 +29,17 @@ body {
     justify-content: space-between;
 }
 
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
 /*topo do site*/
 #topo {
     position: fixed;
@@ -45,8 +56,8 @@ header {
 }
 
 #Logo img {
-    width: 64px;
-    height: 64px;
+    width: 188px;
+    height: 118px;
 }
 
 #check {
@@ -84,6 +95,29 @@ nav ul li a {
     color: #fff;
 }
 
+/* destaque */
+main {
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
+
+}
+
 /*Smartphone landscape*/
 @media (min-width: 576px) {
 
@@ -91,12 +125,32 @@ nav ul li a {
     .Conteiner {
         max-width: 540px;
     }
+
+    /* destaque */
+    main h1,
+    main h2 {
+        text-shadow: #000 0.05em 0.05em 0.05em;
+    }
+
 }
 
 /*Tablet Portrait*/
 @media (min-width: 768px) {
     .Conteiner {
         max-width: 720px;
+    }
+
+    /* destaque */
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
     }
 }
 
@@ -106,6 +160,14 @@ nav ul li a {
     .Conteiner {
         max-width: 960px;
     }
+
+    /* destaque */
+    main {
+        height: 70vh;
+    }
+
+    
+    
 }
 
 /*PC*/
@@ -152,4 +214,4 @@ nav ul li a {
         color: #c00000;
     }
 
-    }
+}

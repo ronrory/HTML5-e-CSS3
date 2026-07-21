@@ -3,15 +3,16 @@
     @AUTHOR: Romulo Andrey
 
 */
+
+/*importações*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 /* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   border: 0;
 }
-
-/*importações*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -33,9 +34,10 @@ body {
   align-items: center;
 }
 
-.flex 3 {
+.Flex3 {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .Botao {
@@ -140,12 +142,12 @@ main h2 {
   display: none;
 }
 
-.textoSobre {
+#textoSobre {
   color: #fff;
   padding: 0px 10px;
 }
 
-.textoSobre h2 {
+#textoSobre h2 {
   margin-bottom: 10px;
 }
 
@@ -175,6 +177,36 @@ main h2 {
   height: 191px;
 }
 
+/* Wireframe */
+
+#wireframe {
+  padding: 50px 0px;
+  background: url(img/background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#textowire {
+  color: #fff;
+  padding: 0px 10px;
+}
+
+#textowire h2 {
+  margin-bottom: 10px;
+}
+
+#textowire p {
+  margin-bottom: 40px;
+}
+
+#textowire span {
+  display: none;
+}
+
+#qrcode {
+  display: none;
+}
+
 /*Smartphone landscape*/
 @media (min-width: 576px) {
   /*Layout*/
@@ -187,13 +219,13 @@ main h2 {
   main h2 {
     text-shadow: #000 0.05em 0.05em 0.05em;
   }
-}
 
-/* One page */
-#video iframe {
-  width: 560px;
-  height: 315px;
-  border: 0;
+  /* One page */
+  #video iframe {
+    width: 560px;
+    height: 315px;
+    border: 0;
+  }
 }
 
 /*Tablet Portrait*/
@@ -281,12 +313,29 @@ main h2 {
   #destaqueSobre img {
     border-radius: 50%;
   }
-}
+  /* One page */
+  .Flex3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  /* Wireframe: faz com a imagem de fundo ficar fixo, seja daseção one page,quanto da secção wireframe*/
+  #wireframe {
+    background-attachment: fixed;
+  }
 
-/* One page pc */
+  #wireframe span {
+    display: inline;
+  }
 
-.Flex3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  /* o professor pediu que colocasse em display inlane, mas o Chat informou que isso causa bugs no dimensionamento e sugeriu o display block e deu certo */
+  #qrcode {
+    display: block;
+  }
+
+  #qrcode img {
+    width: 225px;
+    height: 225px;
+  }
+  
 }
